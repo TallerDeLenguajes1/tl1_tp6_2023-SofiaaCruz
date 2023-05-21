@@ -7,18 +7,44 @@ b=a;
 Console.WriteLine("valor de a:"+a);
 Console.WriteLine("valor de b:"+b);*/
 
-Console.WriteLine("Ingrese un numero: ");
-if (int.TryParse(Console.ReadLine(), out int num)){
 
-    int invertido = 0;
+Console.WriteLine("ingrese dos numeros: ");
 
-    while (num > 0){
-        invertido = invertido*10 + num%10;
-        num /= 10;
+Console.Write("Num1: ");
+string x = Console.ReadLine();
+
+Console.Write("Num2: ");
+string y = Console.ReadLine();
+
+if(int.TryParse(x, out int num1) && int.TryParse(y, out int num2)){
+
+    Console.Write("Elija una opcion:\n1- Sumar\n2- Restar\n3- Multiplicar\n4- Dividir >> ");
+
+    bool aux = int.TryParse(Console.ReadLine(), out int opcion);
+
+    while(!aux || opcion < 1 || opcion > 4){
+
+        Console.Write("Elija una opcion:\n1- Sumar\n2- Restar\n3- Multiplicar\n4- Dividir >> ");
+
+        aux = int.TryParse(Console.ReadLine(), out opcion);
     }
 
-    Console.WriteLine("El numero invertido es: " +invertido);
+    int resultado=0;
+
+    switch(opcion){
+        case 1: resultado = num1+num2;
+        break;
+        case 2: resultado = num1-num2;
+        break;
+        case 3: resultado = num1*num2;
+        break;
+        case 4: resultado = num1/num2;
+        break;
+    }
+
+    Console.WriteLine("El resultados es: " +resultado);
+
 }
 else{
-    Console.WriteLine("No es un numero");
+    Console.WriteLine("Solo puede ingresar numeros");
 }
