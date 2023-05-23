@@ -7,55 +7,13 @@ b=a;
 Console.WriteLine("valor de a:"+a);
 Console.WriteLine("valor de b:"+b);*/
 
-
-/* Console.WriteLine("ingrese dos numeros: ");
-
-Console.Write("Num1: ");
-string? x = Console.ReadLine();
-
-Console.Write("Num2: ");
-string? y = Console.ReadLine();
-
-if(int.TryParse(x, out int num1) && int.TryParse(y, out int num2)){
-
-    Console.Write("Elija una opcion:\n1- Sumar\n2- Restar\n3- Multiplicar\n4- Dividir >> ");
-
-    bool aux = int.TryParse(Console.ReadLine(), out int opcion);
-
-    while(!aux || opcion < 1 || opcion > 4){
-
-        Console.Write("Elija una opcion:\n1- Sumar\n2- Restar\n3- Multiplicar\n4- Dividir >> ");
-
-        aux = int.TryParse(Console.ReadLine(), out opcion);
-    }
-
-    int resultado=0;
-
-    switch(opcion){
-        case 1: resultado = num1+num2;
-        break;
-        case 2: resultado = num1-num2;
-        break;
-        case 3: resultado = num1*num2;
-        break;
-        case 4: resultado = num1/num2;
-        break;
-    }
-
-    Console.WriteLine("El resultados es: " +resultado);
-
-}
-else{
-    Console.WriteLine("Solo puede ingresar numeros");
-}*/
-
 int opcion, a;
 double num, resultado=0, b, c; 
 string? x, y;
 bool aux1, aux2;
 
 do{
-    Console.Write("Que desea hacer?\n1- Sumar\n2- Restar\n3- Multiplicar\n4- Dividir\n5-Calcular el valor absoluto de un numero\n6-Calcular el cuadrado de un numero\n7-Calcular la raiz cuadrada de un numero\n8-Calcular el seno de un numero\n9-Calcular el coseno de un numero\n10-La parte entera de un float\n0-SALIR\n>> ");
+    Console.Write("Que desea hacer?\n1-Sumar\n2-Restar\n3-Multiplicar\n4-Dividir\n5-Calcular el valor absoluto de un número\n6-Calcular el cuadrado de un número\n7-Calcular la raiz cuadrada de un número\n8-Calcular el seno de un número\n9-Calcular el coseno de un número\n10-La parte entera de un float\n0-SALIR\n>> ");
     x = Console.ReadLine();
 
     while (!int.TryParse(x, out opcion) || opcion < 0 || opcion > 10){
